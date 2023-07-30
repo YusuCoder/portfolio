@@ -1339,6 +1339,7 @@ body {
 
 .php-email-form-1 button[type=submit] {
   background: #18d26e;
+  margin-top: 10px;
   border: 0;
   padding: 10px 30px;
   color: #fff;
