@@ -703,13 +703,6 @@ section .container {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  background: rgba(204, 204, 204, 0.1);
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
-}
-
 body {
   font-family: Arial, sans-serif;
   display: flex;
@@ -719,13 +712,26 @@ body {
   margin: 0;
 }
 
+.services .icon-box {
+  text-align: center;
+  background: rgba(204, 204, 204, 0.1);
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+}
+
 .posts-container {
   display: flex;
-  gap: 20px; /* Gap between posts */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the posts container */
+  width: 100%;
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 0 auto;
 }
 
 .post-button {
-  width: 350px;
+  flex: 1 1 300px; /* Make each post-button flexible */
+  max-width: 350px; /* Maximum width */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -735,10 +741,9 @@ body {
 }
 
 .image-container {
-  width: 350px;
+  width: 100%;
   height: 250px;
   overflow: hidden;
-  margin: 3px;
 }
 
 .image-container img {
@@ -749,17 +754,16 @@ body {
 }
 
 .post-button:hover .image-container img {
-  transform: scale(1.5); /* Scale the image by 10% on hover */
+  transform: scale(1.1); /* Scale the image by 10% on hover */
 }
 
 .post-info {
-  padding: 8px;
-  margin: 3px;
+  padding: 16px;
 }
 
 .post-info h4 {
-  margin: 0;
-  font-size: 16px;
+  margin: 0 0 10px 0;
+  font-size: 18px;
 }
 
 .post-info p {
@@ -767,16 +771,11 @@ body {
   font-size: 14px;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+.pdf-button {
+  margin-top: auto;
+  text-align: center;
+  padding: 16px;
 }
-
-/*pdf view btn*/
 
 .pdf-button button {
   padding: 10px 20px;
@@ -793,11 +792,8 @@ body {
   background-color: #45a049;
 }
 
-
-
-
 .services .icon-box .icon {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   width: 64px;
   height: 64px;
   background: #18d26e;
@@ -806,7 +802,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   transform-style: preserve-3d;
 }
 
