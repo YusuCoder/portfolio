@@ -198,7 +198,7 @@ h6 {
   height: 30px;
   border-radius: 10%;
   display: flex;
-  border-width: 0.5px;
+  border-width: 0.0px;
   border-color: rgb(190, 190, 190);
   justify-content: center;
   align-items: center;
@@ -307,7 +307,7 @@ h6 {
 */
 .mobile-nav-toggle {
   color: #fff;
-  font-size: 28px;
+  font-size: 38px;
   cursor: pointer;
   display: none;
   line-height: 0;
