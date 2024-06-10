@@ -189,12 +189,12 @@ h6 {
 #lang-switcher {
   position: relative;
   right: 165px;
-  top: 70px;
+  top: 50px;
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   box-shadow: none;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex; /* Added */
   justify-content: center; /* Added */
@@ -202,8 +202,8 @@ h6 {
 }
 
 #lang-switcher img {
-  width: 39px;
-  height: 39px;
+  width: 30px;
+  height: 30px;
   /* Remove vertical-align property */
 }
 
