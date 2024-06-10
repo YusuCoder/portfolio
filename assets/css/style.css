@@ -187,20 +187,24 @@ h6 {
 --------------------------------------------------------------*/
 
 #lang-switcher {
-  margin-top: 15px;
-  margin-right: 5px;
-  margin-bottom: 15px;
-  margin-left: 5px;
   position: relative;
-  background-color: transparent;
+  right: 165px;
+  top: 70px;
+  background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   box-shadow: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex; /* Added */
+  justify-content: center; /* Added */
+  align-items: center;
 }
 
 #lang-switcher img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
+  width: 39px;
+  height: 39px;
+  /* Remove vertical-align property */
 }
 
 .dropdown-menu {
@@ -208,8 +212,8 @@ h6 {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.9);
+  background-color: transparent;
+  border: none; /* Removed border-color property */
   padding: 5px;
 }
 
@@ -223,6 +227,7 @@ h6 {
 #lang-switcher:hover .dropdown-menu {
   display: block;
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
