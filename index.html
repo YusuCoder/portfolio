@@ -34,7 +34,7 @@
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
-      <h1><a href="index.html">Rustamjon Yusupov</a></h1>
+      <h1><a href="index.html">Rustam Yusupov</a></h1>
       <!-- image logo part -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
       <h2>I'm a passionate <span>Software Developer</span> from Uzbekistan</h2>
@@ -64,11 +64,15 @@
           <div class="dropdown-menu">
             <a href="index.html">
               <!-- <img src="assets/img/languge_flags/english.png" alt="English"> -->
-              <span>En</span>
+              <span>EN</span>
             </a>
             <a href="index_de.html">
               <!-- <img src="assets/img/languge_flags/german.png" alt="Deutsch"> -->
-              <span>De</span>
+              <span>DE</span>
+            </a>
+            <a href="index_ru.html">
+              <!-- <img src="assets/img/languge_flags/german.png" alt="Deutsch"> -->
+              <span>RU</span>
             </a>
             <!-- Going to add Russian and Uzbek Languages -->
           </div>
@@ -519,7 +523,7 @@
                 </div>
                 <div class="post-info">
                     <h4><a href="#">Udemy certificate</a></h4>
-                    <p>My certificate of competing full java course in Udemy</p>
+                    <p>My Diploma of bachelors of computer engineering.</p>
                 </div>
                 <div class="pdf-button">
                     <a href="https://drive.google.com/file/d/1aKG4OJPkX_xaAKWiFBsnRCnwAgHNaoG7/view?usp=drive_link" target="_blank">
@@ -811,18 +815,30 @@
 
   <script>
     function toggleLanguage() {
-      var currentUrl = window.location.href;
-      if (currentUrl.indexOf('index_de.html') !== -1) {
-        window.location.href = currentUrl.replace('index_de.html', 'index.html');
-      } else {
-        window.location.href = currentUrl.replace('index.html', 'index_de.html');
-      }
+        var currentUrl = window.location.href;
+        if (currentUrl.indexOf('index_de.html') !== -1) {
+            window.location.href = currentUrl.replace('index_de.html', 'index.html');
+        } else if (currentUrl.indexOf('index_ru.html') !== -1) {
+            window.location.href = currentUrl.replace('index_ru.html', 'index.html');
+        } else {
+            window.location.href = currentUrl.replace('index.html', 'index_de.html');
+        }
     }
     document.getElementById('lang-switcher').addEventListener('click', function() {
-    var dropdownMenu = this.querySelector('.dropdown-menu');
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
     });
-  </script>
+    document.getElementById('lang-en').addEventListener('click', function() {
+        window.location.href = window.location.href.replace(/index(_de|_ru)?\.html/, 'index.html');
+    });
+    document.getElementById('lang-de').addEventListener('click', function() {
+        window.location.href = window.location.href.replace(/index(_ru)?\.html/, 'index_de.html');
+    });
+    document.getElementById('lang-ru').addEventListener('click', function() {
+        window.location.href = window.location.href.replace(/index(_de)?\.html/, 'index_ru.html');
+    });
+</script>
+
 
 </body>
 
