@@ -34,12 +34,11 @@
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
-      <button id="lang-switcher">Switch Language</button>
-
+  
       <h1><a href="index.html">Rustamjon Yusupov</a></h1>
       <!-- image logo part -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>Ich bin leidenschaftlich <span>Softwareentwickler</span> aus Usbekistan.</h2>
+      <h2>Ich bin ein leidenschaftlicher <span>Softwareentwickler</span> aus Usbekistan.</h2>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -62,6 +61,22 @@
         <a href="https://t.me/RY00101" class="telegram" target="_blank"><i class="bi bi-telegram"></i></a>
 
       </div>
+
+      <button id="lang-switcher">
+        <img src="assets/img/languge_flags/german.png" alt="">
+        <span>De</span>
+        <div class="dropdown-menu">
+          <a href="index.html">
+            <img src="assets/img/languge_flags/english.png" alt="English">
+            <span>English</span>
+          </a>
+          <a href="index_de.html">
+            <img src="assets/img/languge_flags/german.png" alt="Deutsch">
+            <span>Deutsch</span>
+          </a>
+          <!-- Going to add Russian and Uzbek Languages -->
+        </div>
+      </button>
 
     </div>
   </header><!-- End Header -->
@@ -510,7 +525,7 @@
                 </div>
                 <div class="pdf-button">
                     <a href="https://drive.google.com/file/d/1kqh0wsv_4FC6Kj2GmXcpzNAOKuVUC-Rl/view?usp=drive_link" target="_blank">
-                        <button>Anzeigen PDF</button>
+                        <button>View PDF</button>
                     </a>
                 </div>
             </div>
@@ -811,22 +826,19 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    // Define function to toggle between English and German
     function toggleLanguage() {
       var currentUrl = window.location.href;
       if (currentUrl.indexOf('index_de.html') !== -1) {
-        // Current page is in German, switch to English
         window.location.href = currentUrl.replace('index_de.html', 'index.html');
       } else {
-        // Current page is in English, switch to German
         window.location.href = currentUrl.replace('index.html', 'index_de.html');
       }
     }
-
-    // Add click event listener to the language switcher button
-    document.getElementById('lang-switcher').addEventListener('click', toggleLanguage);
+    document.getElementById('lang-switcher').addEventListener('click', function() {
+    var dropdownMenu = this.querySelector('.dropdown-menu');
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
   </script>
-
 
 </body>
 
