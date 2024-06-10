@@ -190,11 +190,12 @@ h6 {
   position: relative;
   right: 283px;
   top: 50px;
+  margin-top: 20px;
   background: transparent;
   color: #ffffff;
   box-shadow: none;
-  width: 70px;
-  height: 40px;
+  width: 50px;
+  height: 30px;
   border-radius: 10%;
   display: flex;
   border-width: 0.5px;
@@ -204,9 +205,9 @@ h6 {
 }
 
 #lang-switcher img {
-  width: 30px;
-  height: 30px;
-  margin-right: 6px;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
 }
 
 .dropdown-menu {
