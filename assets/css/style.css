@@ -20,8 +20,10 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/background-1939128_1920.jpg") top right no-repeat;
-  background-size: cover;
+  background: #040404 url('https://media.giphy.com/media/PJsehozMve9wn9334F/giphy.gif') top right no-repeat;
+  /* background-size: cover; */
+  background-size: contain;
+  background-repeat: no-repeat;
   left: 0;
   right: 0;
   top: 0;
