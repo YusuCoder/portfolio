@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -68,6 +78,7 @@ h6 {
   line-height: 1;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 #header h1 a,
@@ -75,18 +86,24 @@ h6 {
   color: #fff;
   line-height: 1;
   display: inline-block;
+  animation: fadeIn 0.8s ease-in-out;
+  padding-right: 60px;
+
 }
 
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
+  animation: fadeIn 0.8s ease-in-out;
+
 }
 
 #header h2 span {
   color: #fff;
   border-bottom: 2px solid #18d26e;
   padding-bottom: 6px;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 #header img {
@@ -198,7 +215,7 @@ h6 {
   height: 30px;
   border-radius: 10%;
   display: flex;
-  border-width: 0.5px;
+  border-width: 0px;
   border-color: rgb(190, 190, 190);
   justify-content: center;
   align-items: center;
@@ -305,6 +322,17 @@ h6 {
 /**
 * Mobile Navigation
 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .mobile-nav-toggle {
   color: #fff;
   font-size: 28px;
@@ -357,10 +385,13 @@ h6 {
   overflow-y: auto;
   transition: 0.3s;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
 }
 
 .navbar-mobile li {
   padding: 12px 20px;
+  text-align: left;
+  animation: fadeIn 0.7s ease-in-out;
 }
 
 .navbar-mobile li+li {
@@ -371,6 +402,8 @@ h6 {
 .navbar-mobile a:focus {
   font-size: 16px;
   position: relative;
+  text-align: left;
+  animation: fadeIn 0.7s ease-in-out;
 }
 
 /*--------------------------------------------------------------
