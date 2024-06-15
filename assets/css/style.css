@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -5,13 +15,38 @@ body {
   color: #fff;
   position: relative;
   background: transparent;
+  overflow: auto;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-size: cover;
 }
 
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/background-1939128_1920.jpg") top right no-repeat;
+  background: #040404 url('../videos/4Cb2.gif') center center no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   left: 0;
   right: 0;
   top: 0;
@@ -68,6 +103,7 @@ h6 {
   line-height: 1;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 #header h1 a,
@@ -75,18 +111,24 @@ h6 {
   color: #fff;
   line-height: 1;
   display: inline-block;
+  animation: fadeIn 0.8s ease-in-out;
+  padding-right: 50px;
+
 }
 
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
+  animation: fadeIn 0.8s ease-in-out;
+
 }
 
 #header h2 span {
   color: #fff;
   border-bottom: 2px solid #18d26e;
   padding-bottom: 6px;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 #header img {
@@ -198,7 +240,7 @@ h6 {
   height: 30px;
   border-radius: 10%;
   display: flex;
-  border-width: 0.0px;
+  border-width: 0px;
   border-color: rgb(190, 190, 190);
   justify-content: center;
   align-items: center;
@@ -225,6 +267,26 @@ h6 {
   align-items: center;
   color: #ffffff;
   text-decoration: none;
+}
+
+.audio-button {
+  background: transparent; /* Transparent background */
+  border: none; /* No border */
+  color: white; /* White icon color */
+  font-size: 24px; /* Icon size */
+  cursor: pointer; /* Pointer cursor on hover */
+  outline: none; /* Remove outline */
+  display: block;
+  margin: 20px auto; /* Center the button */
+  padding: 10px; /* Padding for better click area */
+}
+
+.audio-button i {
+  pointer-events: none; /* Prevent pointer events on icon itself */
+}
+
+.audio-button:focus {
+  outline: none; /* Remove focus outline */
 }
 
 /*--------------------------------------------------------------
@@ -305,6 +367,17 @@ h6 {
 /**
 * Mobile Navigation
 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .mobile-nav-toggle {
   color: #fff;
   font-size: 38px;
@@ -357,10 +430,13 @@ h6 {
   overflow-y: auto;
   transition: 0.3s;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
 }
 
 .navbar-mobile li {
   padding: 12px 20px;
+  text-align: left;
+  animation: fadeIn 0.7s ease-in-out;
 }
 
 .navbar-mobile li+li {
@@ -371,6 +447,8 @@ h6 {
 .navbar-mobile a:focus {
   font-size: 16px;
   position: relative;
+  text-align: left;
+  animation: fadeIn 0.7s ease-in-out;
 }
 
 /*--------------------------------------------------------------

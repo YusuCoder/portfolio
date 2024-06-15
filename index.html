@@ -77,6 +77,16 @@
             <!-- Going to add Russian and Uzbek Languages -->
           </div>
         </button>
+
+        <audio id="background-audio" loop>
+          <source src="path-to-your-audio-file.mp3" type="audio/mpeg"> <!-- Replace with the path to your audio file -->
+          Your browser does not support the audio element.
+      </audio>
+  
+      <!-- Button to toggle audio with an icon -->
+      <button id="audio-toggle" class="audio-button">
+        <i class="fas fa-play"></i> <span class="audio-text">Play Audio</span>
+    </button>
       </div>
 
     </div>
@@ -812,8 +822,30 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
 
   <script>
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+            const audio = document.getElementById('background-audio');
+            const button = document.getElementById('audio-toggle');
+            const icon = button.querySelector('i');
+
+            button.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    icon.classList.remove('fa-play');
+                    icon.classList.add('fa-pause');
+                    button.setAttribute('aria-label', 'Pause Audio');
+                } else {
+                    audio.pause();
+                    icon.classList.remove('fa-pause');
+                    icon.classList.add('fa-play');
+                    button.setAttribute('aria-label', 'Play Audio');
+                }
+            });
+        });
+
     function toggleLanguage() {
         var currentUrl = window.location.href;
         if (currentUrl.indexOf('index_de.html') !== -1) {
