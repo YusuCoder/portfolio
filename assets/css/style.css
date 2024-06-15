@@ -227,12 +227,16 @@ h6 {
 /*--------------------------------------------------------------
 # Language-switcher
 --------------------------------------------------------------*/
+#header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  top: 50px;
+}
 
 #lang-switcher {
-  position: relative;
-  right: 283px;
-  top: 50px;
-  margin-top: 20px;
+  margin-right: 20px;
   background: transparent;
   color: #ffffff;
   box-shadow: none;
@@ -240,10 +244,10 @@ h6 {
   height: 30px;
   border-radius: 10%;
   display: flex;
-  border-width: 0px;
-  border-color: rgb(190, 190, 190);
   justify-content: center;
   align-items: center;
+  border-width: 0px;
+  border-color: rgb(190, 190, 190);
 }
 
 #lang-switcher img {
@@ -270,23 +274,22 @@ h6 {
 }
 
 .audio-button {
-  background: transparent; /* Transparent background */
-  border: none; /* No border */
-  color: white; /* White icon color */
-  font-size: 24px; /* Icon size */
-  cursor: pointer; /* Pointer cursor on hover */
-  outline: none; /* Remove outline */
-  display: block;
-  margin: 20px auto; /* Center the button */
-  padding: 10px; /* Padding for better click area */
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
 }
 
 .audio-button i {
-  pointer-events: none; /* Prevent pointer events on icon itself */
+  pointer-events: none;
 }
 
 .audio-button:focus {
-  outline: none; /* Remove focus outline */
+  outline: none;
 }
 
 /*--------------------------------------------------------------

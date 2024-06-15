@@ -30,14 +30,6 @@
 </head>
 
 <body>
-<!-- 
-  <div class="video-background">
-    <video autoplay muted loop id="bg-video">
-      <source src="assets/videos/sky.gif" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div> -->
-
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
@@ -65,6 +57,8 @@
         <a href="https://www.linkedin.com/in/rustam-yusupov-1b0693226/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/YusuCoder" class="github" target="_blank"><i class="bi bi-github"></i></a>
         <a href="https://t.me/RY00101" class="telegram" target="_blank"><i class="bi bi-telegram"></i></a>
+      </div>
+      <div id="header-right">
         <button id="lang-switcher">
           <img src="assets/img/languge_flags/ru.png" alt="">
           <span>RU</span>
@@ -84,8 +78,15 @@
             <!-- Going to add Russian and Uzbek Languages -->
           </div>
         </button>
+        <audio id="background-audio" loop>
+          <source src="path-to-your-audio-file.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <!-- Button to toggle audio with an icon -->
+        <button id="audio-toggle" class="audio-button">
+          <i class="fas fa-play"></i> <span class="audio-text">Unmute Audio</span>
+        </button>
       </div>
-
     </div>
   </header><!-- End Header -->
 
@@ -370,7 +371,7 @@
               <h4>Designer</h4>
             </div>
           </div>End testimonial item -->
-<!-- 
+<!--
           <div class="swiper-slide">
             <div class="testimonial-item">
               <p>
@@ -396,7 +397,7 @@
               <h4>Freelancer</h4>
             </div>
           </div>< End testimonial item -->
-<!-- 
+<!--
           <div class="swiper-slide">
             <div class="testimonial-item">
               <p>
@@ -409,7 +410,7 @@
               <h4>Entrepreneur</h4>
             </div>
           </div> End testimonial item -->
-<!-- 
+<!--
         </div>
         <div class="swiper-pagination"></div>
       </div>
