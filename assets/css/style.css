@@ -57,8 +57,8 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #000000 url('../videos/2RNb.gif') center center no-repeat;
-  background-size: contain;
+  background: #000000 url('../videos/Dark_Background_Web_9sNQFJAb3Ss_137.gif') center center no-repeat;
+  background-size: cover;
   background-repeat: no-repeat;
   left: 0;
   right: 0;
