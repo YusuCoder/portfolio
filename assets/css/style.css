@@ -18,6 +18,44 @@ body {
   overflow: auto;
 }
 
+/*table style*/
+table {
+  width: 100%; /* Set the table to take up the full width of the container */
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+/* Table Header and Data Cells */
+th, td {
+  padding: 12px;
+  border: 2px solid #dddddd;
+}
+
+/* Set Description column width */
+th:nth-child(2), td:nth-child(2) {
+  width: 100%; /* Increase the width of the Description column */
+}
+
+th {
+  background-color: transparent;
+}
+
+tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+  background-color: #bdbdbd;
+}
+
+
 /*welcome screen*/
 #loading-screen {
   position: fixed;

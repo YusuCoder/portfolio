@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8">
+            <h2 class="portfolio-title">Examples of how the minishell works</h2>
+
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="../assets/videos/push_swap/push_swap.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../assets/videos/push_swap/push_swap_ra.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../assets/videos/push_swap/push_swap_rra.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../assets/videos/push_swap/push_swap_pb.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Language</strong>: C </li>
+              <li><strong>Location</strong>: 42Heilbronn</li>
+              <li><strong>Project date</strong>: 29 MAy, 2024</li>
+              <li><strong>Project URL</strong>: <a href="#">https://github.com/YusuCoder/minishell</a></li>
+            </ul>
+
+            <table border="2">
+              <thead>
+                <tr>
+                  <th>Commands</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>echo</th>
+                  <th>with option -n</th>
+                </tr>
+                <tr>
+                  <th>cd</th>
+                  <th>with ~ (tilde) flag, - (prev. dir), absalute and relative paths</th>
+                 </tr>
+                <tr>
+                  <th>pwd</th>
+                  <th>with no options</th>
+                </tr>
+                <tr>
+                  <th>export</th>
+                  <th>with no options</th>
+                </tr>
+                <tr>
+                  <th>unset</th>
+                  <th>with no options</th>
+                </tr>
+                <tr>
+                  <th>exit</th>
+                  <th>with exit number</th>
+                </tr>
+                <tr>
+                  <th>env</th>
+                  <th>with no options or arguments</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <table border="2">
+              <thead>
+                <tr>
+                  <th>Redirections</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>></th>
+                  <th>redirects output</th>
+                </tr>
+                <tr>
+                  <th>>></th>
+                  <th>redirects output in append mode</th>
+                 </tr>
+                <tr>
+                  <th><</th>
+                  <th>with no options</th>
+                </tr>
+                <tr>
+                  <th>export</th>
+                  <th>with no options</th>
+                </tr>
+                <tr>
+                  <th>unset</th>
+                  <th>with no options</th>
+                </tr>
+                <tr>
+                  <th>exit</th>
+                  <th>with exit number</th>
+                </tr>
+                <tr>
+                  <th>env</th>
+                  <th>with no options or arguments</th>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <p>
+              <br>Minishell is a miniature shell program based on Bash and it suppports:
+              <br>Ponmpt display
+              <br>Command history(up and down arrows)
+              <br>System executables available from the environment(ls, cat, grep ... etc.)
+              <br>Local executable(./minishell)
+              <br>Builtin commands :
+              <br><b>"echo"</b> (with option -n)
+              <br><b>"cd"</b> (with ~ (tilde) flag, - (prev. dir), absalute and relative paths)
+              <br><b>"pwd"</b> (with no options)
+              <br><b>"export"</b> (with no options)
+              <br><b>"unset"</b> (with no options)
+              <br><b>"exit"</b> (with exit number)
+              <br><b>"env"</b> (with no options or arguments)
+              <br>Pipes | with redirect output from one command to input for the next
+              <br>Redirections:
+              <br><b>">"</b> redirects output
+              <br><b>">>"</b> redirects output in append mode
+              <br><b>"<"</b> redirects input
+              <br><b>"<<"</b> DELIMETER Heredoc displays a new prompt, reads user input untill reachinig DELIMETER, redirects user input to command input (does not update history)
+              <br>Environment variables (i.e. $USER or $VAR) that expand to their values.
+              <br><b>"$?"</b> expands to the exit status of last executed foreground pipeline.
+              <br>User keybord signals:
+              <br><b>"Ctrl+C"</b> displays new prompt line in interactive mode (Parent process), in non-interactive mode (child process) interupts process with the signal SIGINT and updates exit_status to 131.
+              <br><b>"Ctrl+D"</b> exits any kind of process (if the prompt is empty)
+              <br><b>"Ctrl+\"</b> does nothing in interactive mode (parent process) and in non-interactive mode (child process) sends the signal SIGQUIT to interupt non-interactive process.
+            </p> -->
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+
+  </main><!-- End #main -->
+
+  <div class="credits">
+
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
