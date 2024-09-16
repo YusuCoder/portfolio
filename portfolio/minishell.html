@@ -46,24 +46,36 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="../assets/videos/push_swap/push_swap.png" alt="">
+                  <img src="../assets/img/portfolio/minishell/heredoc.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="../assets/videos/push_swap/push_swap_ra.png" alt="">
+                  <img src="../assets/img/portfolio/minishell/append.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="../assets/videos/push_swap/push_swap_rra.png" alt="">
+                  <img src="../assets/img/portfolio/minishell/file.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="../assets/videos/push_swap/push_swap_pb.png" alt="">
+                  <img src="../assets/img/portfolio/minishell/pipe.png" alt="">
                 </div>
 
               </div>
               <div class="swiper-pagination"></div>
             </div>
+            <h4>
+               The objective of this project is for us to create a simple shell. 
+               Yes, out own little bash or zsh. We will lear a lot about processes 
+               and file descriptors and This project was one of the most challenging 
+               yet indulging projects of the 42 curriculum that I have faced so far,
+               when you have to deal with many test cases and when you get to learn many things,
+               from software architecture, system calls, file descriptors… to team coordination, 
+               management, and work distribution
+
+               <p>For more information, please visit my GitHub page: <a href="https://github.com/YusuCoder/minishell" target="_blank">GitHub</a>.</p>
+
+            </h4>
 
           </div>
 
@@ -73,9 +85,11 @@
               <li><strong>Language</strong>: C </li>
               <li><strong>Location</strong>: 42Heilbronn</li>
               <li><strong>Project date</strong>: 29 MAy, 2024</li>
-              <li><strong>Project URL</strong>: <a href="#">https://github.com/YusuCoder/minishell</a></li>
+              <li><strong>Project URL</strong>: <a href="https://github.com/YusuCoder/minishell" target="_blank">Github</a></li>
             </ul>
-
+            <h3>
+              Minishell is a miniature shell program based on Bash and it suppports:
+            </h3>
             <table border="2">
               <thead>
                 <tr>
@@ -133,23 +147,44 @@
                  </tr>
                 <tr>
                   <th><</th>
-                  <th>with no options</th>
+                  <th>redirects input to standart output</th>
                 </tr>
                 <tr>
-                  <th>export</th>
-                  <th>with no options</th>
+                  <th><<</th>
+                  <th>Heredoc displays a new prompt, reads user input untill reachinig DELIMETER</th>
                 </tr>
                 <tr>
-                  <th>unset</th>
-                  <th>with no options</th>
+                  <th>Environment variables</th>
+                  <th>'$?' expands to the exit status of last executed foreground pipeline.</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <table border="2">
+              <thead>
+                <tr>
+                  <th>Signals</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Ctrl+C</th>
+                  <th>isplays new prompt line in interactive mode (Parent process),
+                     in non-interactive mode (child process) interupts process with 
+                     the signal SIGINT and updates exit_status to 131.
+                  </th>
                 </tr>
                 <tr>
-                  <th>exit</th>
-                  <th>with exit number</th>
-                </tr>
+                  <th>Ctrl+D</th>
+                  <th>exits any kind of process (if the prompt is empty)</th>
+                 </tr>
                 <tr>
-                  <th>env</th>
-                  <th>with no options or arguments</th>
+                  <th>Ctrl+\</th>
+                  <th>does nothing in interactive mode (parent process) 
+                      and in non-interactive mode (child process) sends the signal 
+                      SIGQUIT to interupt non-interactive process.
+                  </th>
                 </tr>
               </tbody>
             </table>
