@@ -281,11 +281,11 @@ canvas {
   overflow-y: auto;
 }
 
-#header {
+/* #header {
   opacity: 0;
-  transform: translateY(-50px); /* Start position: 50px above the final position */
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
-}
+  transform: translateY(-50px); 
+  transition: opacity 1s ease, transform 1s ease;
+} */
 
 #header.show{
   opacity: 1;
