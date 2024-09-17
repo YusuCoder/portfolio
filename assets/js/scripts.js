@@ -1,31 +1,31 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const loadingScreen = document.getElementById("loading-screen");
-    const header = document.getElementById("header");
-    const welcomeText = document.querySelector(".welcome-text");
+// document.addEventListener("DOMContentLoaded", function() {
+//     const loadingScreen = document.getElementById("loading-screen");
+//     const header = document.getElementById("header");
+//     const welcomeText = document.querySelector(".welcome-text");
 
-    const messages = ["Welcome", "To", "My World!"];
-    let index = 0;
+//     const messages = ["Welcome", "To", "My World!"];
+//     let index = 0;
 
-    const changeText = () => {
-        welcomeText.innerText = messages[index];
-        index = (index + 1) % messages.length;
-    };
+//     const changeText = () => {
+//         welcomeText.innerText = messages[index];
+//         index = (index + 1) % messages.length;
+//     };
 
-    changeText();
+//     changeText();
 
-    let messageInterval = setInterval(changeText, 2000);
+//     let messageInterval = setInterval(changeText, 2000);
 
 
-    setTimeout(() => {
-        clearInterval(messageInterval);
-        loadingScreen.style.opacity = '0';
+//     setTimeout(() => {
+//         clearInterval(messageInterval);
+//         loadingScreen.style.opacity = '0';
 
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            header.classList.add('show');
-        }, 800);
-    }, 6000);
-  });
+//         setTimeout(() => {
+//             loadingScreen.style.display = 'none';
+//             header.classList.add('show');
+//         }, 800);
+//     }, 6000);
+//   });
 
 
   document.addEventListener('DOMContentLoaded', (event) => {

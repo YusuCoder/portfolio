@@ -30,20 +30,29 @@
 </head>
 
 <body>
-
-  <div id="loading-screen">
+  <canvas class="hero__canvas"></canvas>
+  <!-- <div id="loading-screen">
     <div class="welcome-text" id="welcome-text">Welcome</div>
+  </div> -->
+
+  <div class="splash__screen">
+    <div class="left"></div>
+    <div class="right">
+        <h1 class="percentage">0%</h1>
+    </div>
+    <div class="progress__bar"></div>
   </div>
 
+<!-- 
   <div class="video-background">
     <video autoplay muted loop id="bgVideo">
       <source src="./assets/videos/tech.webm" type="video/webm">
       Your browser does not support HTML5 video.
     </video>
-  </div>
+  </div> -->
 
   <!-- ======= Header ======= -->
-  <header id="header">
+  <header id="header" class="delayed-visibility">
     <div class="container">
       <h1><a href="index.html">Добро пожаловать...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></h1>
       <!-- image logo part -->
@@ -846,7 +855,7 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/scripts_ru.js"></script>
-
+  <script type="module" src="assets/js/app.js"></script>
 </body>
 
 </html>
