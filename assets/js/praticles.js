@@ -1,8 +1,7 @@
 const canvas = document.querySelector('.hero__canvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
-let randoSpeed = 5
-
+let randoSpeed = 10
 class Particle{
     constructor(){
         this.coordinates = {
@@ -36,9 +35,9 @@ class Particle{
         }
         for(let i = 0; i < particles.length; i++ ){
             let {x, y} = this.coordinates;
-            if(Math.abs(x - particles[i].coordinates.x) <= 200 && Math.abs(y - particles[i].coordinates.y) <= 150){
+            if(Math.abs(x - particles[i].coordinates.x) <= 300 && Math.abs(y - particles[i].coordinates.y) <= 240){
                 ctx.strokeStyle = `#03c0ff25`
-        
+
                 ctx.beginPath();
                 ctx.moveTo(x, y);
                 ctx.lineTo(particles[i].coordinates.x, particles[i].coordinates.y)
@@ -54,7 +53,7 @@ class Particle{
 function setDimensions(){
 
     particles = []
-    
+
     canvas.width = window.innerWidth * window.devicePixelRatio;
     canvas.height = window.innerHeight * window.devicePixelRatio;
     canvas.style.width = `100%`
@@ -63,7 +62,7 @@ function setDimensions(){
         particle.reset()
     })
     let w = window.innerWidth
-    let particleTotal = w > 1000 ? 300 : 150
+    let particleTotal = w > 1000 ? 500 : 350
 
     for(let i = 0; i < particleTotal; i++){
         let particle = new Particle();

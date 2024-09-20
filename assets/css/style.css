@@ -47,7 +47,7 @@ body::before {
 
 .left.active{
   transform: translateX(-100%);
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #161616;
 }
 
 
@@ -64,7 +64,7 @@ body::before {
 
 .right.active{
   transform: translateX(100%);
-  border-left: 1px solid #ffffff;
+  border-left: 1px solid #161616;
 }
 
 .progress__bar{
@@ -72,7 +72,7 @@ body::before {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 1px;
+  width: 2px;
   height: 0%;
   background-color: white;
 
