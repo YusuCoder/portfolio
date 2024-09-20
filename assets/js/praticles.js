@@ -1,7 +1,7 @@
 const canvas = document.querySelector('.hero__canvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
-let randoSpeed = 10
+let randoSpeed = 2
 class Particle{
     constructor(){
         this.coordinates = {
@@ -20,22 +20,26 @@ class Particle{
     }
 
     move(){
+        let maxDistanceX = window.innerWidth < 768 ? 170 : 350;
+        let maxDistanceY = window.innerWidth < 768 ? 150 : 270;
+
+        // Bounce off edges
         if(this.coordinates.x >= canvas.width){
             this.speedX = this.speedX * -1
         }
         if(this.coordinates.y >= canvas.height){
             this.speedY = this.speedY * -1
         }
-
         if(this.coordinates.y <= 0){
             this.speedY = this.speedY * -1
         }
         if(this.coordinates.x <= 0){
             this.speedX = this.speedX * -1
         }
+
         for(let i = 0; i < particles.length; i++ ){
             let {x, y} = this.coordinates;
-            if(Math.abs(x - particles[i].coordinates.x) <= 300 && Math.abs(y - particles[i].coordinates.y) <= 240){
+            if(Math.abs(x - particles[i].coordinates.x) <= maxDistanceX && Math.abs(y - particles[i].coordinates.y) <= maxDistanceY){
                 ctx.strokeStyle = `#03c0ff25`
 
                 ctx.beginPath();
@@ -48,27 +52,32 @@ class Particle{
         this.coordinates.x += this.speedX;
         this.coordinates.y += this.speedY;
     }
+
 }
 
 function setDimensions(){
-
     particles = []
 
     canvas.width = window.innerWidth * window.devicePixelRatio;
     canvas.height = window.innerHeight * window.devicePixelRatio;
-    canvas.style.width = `100%`
+    canvas.style.width = `100%`;
     canvas.style.height = `100%`;
+
     particles.forEach(particle => {
-        particle.reset()
-    })
-    let w = window.innerWidth
-    let particleTotal = w > 1000 ? 500 : 350
+        particle.reset();
+    });
+
+    let randoSpeed = window.innerWidth < 768 ? 1 : 2;
+
+    let w = window.innerWidth;
+    let particleTotal = w > 1000 ? 500 : (w < 768 ? 200 : 350); // Reduce to 200 on mobile
 
     for(let i = 0; i < particleTotal; i++){
         let particle = new Particle();
-        particles.push(particle)
+        particles.push(particle);
     }
 }
+
 
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
