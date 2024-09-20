@@ -20,8 +20,8 @@ class Particle{
     }
 
     move(){
-        let maxDistanceX = window.innerWidth < 768 ? 170 : 350;
-        let maxDistanceY = window.innerWidth < 768 ? 150 : 270;
+        let maxDistanceX = window.innerWidth < 468 ? 200 : 150;
+        let maxDistanceY = window.innerWidth < 468 ? 200 : 150;
 
         // Bounce off edges
         if(this.coordinates.x >= canvas.width){
@@ -67,10 +67,10 @@ function setDimensions(){
         particle.reset();
     });
 
-    let randoSpeed = window.innerWidth < 768 ? 1 : 2;
+    let randoSpeed = window.innerWidth < 468 ? 1 : 2;
 
     let w = window.innerWidth;
-    let particleTotal = w > 1000 ? 500 : (w < 768 ? 300 : 350); // Reduce to 200 on mobile
+    let particleTotal = w > 1000 ? 500 : (w < 468 ? 300 : 150); // Reduce to 200 on mobile
 
     for(let i = 0; i < particleTotal; i++){
         let particle = new Particle();
