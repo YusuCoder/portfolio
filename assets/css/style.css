@@ -1,3 +1,17 @@
+
+body::before {
+  content: "";
+  position: fixed;
+  background: #040404;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
 .splash__screen{
   position: fixed;
   top: 0;
@@ -13,7 +27,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Ensure the canvas is behind the header */
+  z-index: 1;
 }
 
 .splash__screen.complete{
@@ -100,7 +114,7 @@ body {
 
 /*table style*/
 table {
-  width: 100%; /* Set the table to take up the full width of the container */
+  width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
   font-family: Arial, sans-serif;
@@ -115,7 +129,7 @@ th, td {
 
 /* Set Description column width */
 th:nth-child(2), td:nth-child(2) {
-  width: 100%; /* Increase the width of the Description column */
+  width: 100%;
 }
 
 th {
@@ -171,19 +185,6 @@ tbody tr:hover {
 } */
 /*welcome screen end*/
 
-
-body::before {
-  content: "";
-  position: fixed;
-  background: #040404;
-  background-size: cover;
-  background-repeat: no-repeat;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  z-index: 1;
-}
 
 /* .video-background {
   position: fixed;
@@ -247,13 +248,7 @@ h6 {
 }
 
 canvas {
-  z-index: 0;
-}
-
-.delayed-visibility {
-  opacity: 0;
-  visibility: hidden;
-  animation: fadeInVisibility 1s ease 7s forwards; /* Animation starts after 3 seconds */
+  z-index: 100;
 }
 
 @keyframes fadeInVisibility {
@@ -281,11 +276,11 @@ canvas {
   overflow-y: auto;
 }
 
-/* #header {
+#header {
   opacity: 0;
-  transform: translateY(-50px); 
+  transform: translateY(-10px);
   transition: opacity 1s ease, transform 1s ease;
-} */
+}
 
 #header.show{
   opacity: 1;

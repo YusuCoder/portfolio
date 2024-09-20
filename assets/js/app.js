@@ -33,17 +33,18 @@ async function setup() {
         progressBar.classList.add('complete');
         splashScreen.classList.add('complete');
         loading = false;
-        
+
         // Show the header after 2 seconds (2000ms) after the progress bar reaches 100%
         setTimeout(() => {
-            header.style.visibility = 'visible';  // Show the header
-            header.style.opacity = 0;             // Start with opacity 0
-            header.style.transition = 'opacity 1s'; // Smooth fade-in transition
+            header.style.visibility = 'visible';
+            navbar.style.visibility = 'visible'
+            header.style.opacity = 0;
+            header.style.transition = 'opacity 2s';
             setTimeout(() => {
-                header.style.opacity = 1;         // Fade in the header
-            }, 100); // Small delay to trigger opacity change
-        }, 2000); // Delay header appearance by 2 seconds (2000ms)
-        
+                header.style.opacity = 1;
+            }, 100);
+        }, 2000);
+
     }, 6000);
 }
 
