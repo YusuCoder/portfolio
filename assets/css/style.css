@@ -272,7 +272,7 @@ canvas {
   height: 100vh;
   display: flex;
   align-items: center;
-  z-index: 997;
+  z-index: 9999;
   overflow-y: auto;
 }
 
@@ -297,6 +297,7 @@ canvas {
   padding: 0;
   line-height: 1;
   font-weight: 700;
+  margin-top: 70px;
   font-family: "Poppins", sans-serif;
   animation: fadeIn 0.8s ease-in-out;
 }
@@ -576,7 +577,7 @@ canvas {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    /* transform: translateY(10px); */
   }
   to {
     opacity: 1;
@@ -668,7 +669,7 @@ section {
   bottom: 100%;
   opacity: 0;
   transition: ease-in-out 0.4s;
-  z-index: 2;
+  z-index: 1;
 }
 
 section.section-show {
